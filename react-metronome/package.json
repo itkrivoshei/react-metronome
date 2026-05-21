@@ -2,7 +2,8 @@
   "name": "react-metronome",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "description": "Modern React metronome and tempo trainer with adjustable BPM, beat accents, and GitHub Pages deployment.",
+  "homepage": "https://itkrivoshei.github.io/react-metronome",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -15,7 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
