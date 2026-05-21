@@ -1,47 +1,28 @@
 # React Metronome
 
-Archived React project implementing a browser-based metronome with adjustable tempo and audio playback.
+Modern browser-based metronome and tempo trainer built with React.
 
-## Overview
-
-This project is a small React application that works as a metronome in the browser.
-
-It was originally built as a personal utility for running pace and rhythm practice. The app allows tempo adjustment and plays click sounds at the selected beat interval.
-
-The repository is kept public as part of my early frontend development background.
+This repository is maintained as a compact portfolio project. It shows a small interactive frontend application with audio playback, state handling, responsive UI styling, and static deployment through GitHub Pages.
 
 ## Live Demo
 
-Demo: https://itkrivoshei.github.io/React-Metronome/
+```text
+https://itkrivoshei.github.io/react-metronome/
+```
 
-If the repository has been renamed, the GitHub Pages URL may have changed. Use the active demo link from the repository homepage.
+## Overview
 
-## Features
+The app provides a simple metronome for rhythm practice, running cadence, and timing drills.
 
-- Browser-based metronome
-- Adjustable tempo
-- Audio click playback
-- React component-based structure
-- CSS and SCSS styling
-- Static deployment with GitHub Pages
-
-## Project Structure
-
-    .
-    ├── docs/
-    ├── react-metronome/
-    │   ├── public/
-    │   ├── src/
-    │   │   ├── App.js
-    │   │   ├── Metronome.js
-    │   │   ├── Metronome.css
-    │   │   ├── Metronome.scss
-    │   │   ├── audio/
-    │   │   └── index.js
-    │   ├── package.json
-    │   └── package-lock.json
-    ├── LICENSE
-    └── README.md
+```text
+User input
+  ↓
+React state
+  ↓
+Timer interval
+  ↓
+Audio click playback + beat indicator
+```
 
 ## Tech Stack
 
@@ -49,24 +30,107 @@ If the repository has been renamed, the GitHub Pages URL may have changed. Use t
 - JavaScript
 - HTML
 - CSS
-- SCSS
+- Web Audio through browser Audio API
 - GitHub Pages
 
-## Skills Demonstrated
+## Features
 
-- React component structure
-- State handling
-- Timer-based UI logic
-- Audio playback in the browser
-- Basic styling with CSS and SCSS
-- Static site deployment with GitHub Pages
+- Adjustable tempo from 40 to 240 BPM
+- Start and stop playback
+- Accent beat for the first beat of each measure
+- Configurable beats per measure from 2/4 to 8/4
+- Volume control
+- Visual beat indicator
+- Keyboard shortcuts for start/stop and tempo control
+- Responsive dark UI
+- Static deployment with GitHub Pages
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `Space` | Start or stop metronome |
+| `ArrowLeft` | Decrease BPM |
+| `ArrowRight` | Increase BPM |
+
+## Project Structure
+
+```text
+.
+├── docs/
+├── react-metronome/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── Metronome.js
+│   │   ├── Metronome.css
+│   │   ├── audio/
+│   │   └── index.js
+│   ├── package.json
+│   └── package-lock.json
+├── LICENSE
+└── README.md
+```
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/itkrivoshei/react-metronome.git
+cd react-metronome/react-metronome
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm start
+```
+
+Open locally:
+
+```text
+http://localhost:3000
+```
+
+## Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The production output is generated in:
+
+```text
+react-metronome/build/
+```
+
+## Portfolio Notes
+
+This project is useful as a public portfolio repository because it demonstrates:
+
+- React component refactoring from class-based code to hooks
+- State management with `useState`, `useEffect`, `useRef`, `useMemo`, and `useCallback`
+- Timer lifecycle management and cleanup
+- Browser audio playback handling
+- Responsive UI design with CSS variables
+- Accessibility basics with labels, focus states, and keyboard controls
+- Static frontend deployment through GitHub Pages
 
 ## Status
 
-This repository is archived and not actively maintained.
+Maintained as a portfolio project.
 
-It is kept public as an early React project and frontend learning milestone.
+The original version was an early React learning project. The current version keeps the same idea but refreshes the UI and code structure for a cleaner public profile.
 
 ## License
 
-This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
+This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.
