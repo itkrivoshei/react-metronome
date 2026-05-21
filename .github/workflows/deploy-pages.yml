@@ -11,6 +11,11 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  NODE_OPTIONS: --openssl-legacy-provider
+  CI: false
+
 concurrency:
   group: github-pages
   cancel-in-progress: true
@@ -19,36 +24,48 @@ jobs:
   build:
     name: Build React app
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      NODE_OPTIONS: --openssl-legacy-provider
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
           cache-dependency-path: react-metronome/package-lock.json
+
       - name: Install dependencies
         working-directory: react-metronome
         run: npm ci
+
       - name: Build static app
         working-directory: react-metronome
         run: npm run build
+
       - name: Add SPA fallback
         run: cp react-metronome/build/index.html react-metronome/build/404.html
+
+      - name: Verify build output
+        run: |
+          test -f react-metronome/build/index.html
+          test -f react-metronome/build/404.html
+          ls -la react-metronome/build
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: react-metronome/build
+
   deploy:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy artifact
         id: deployment
