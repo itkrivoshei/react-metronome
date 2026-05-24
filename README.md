@@ -1,99 +1,61 @@
 # React Metronome
 
-Modern browser-based metronome and tempo trainer built with React.
+[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=master&style=flat-square)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![React](https://img.shields.io/badge/React-16-61dafb?style=flat-square)](react-metronome/package.json)
+[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-live-2ea44f?style=flat-square)](https://itkrivoshei.github.io/react-metronome/)
 
-This repository is maintained as a compact portfolio project. It shows a small interactive frontend application with audio playback, state handling, responsive UI styling, and static deployment through GitHub Pages.
+Browser-based metronome and tempo trainer built with React.
 
-## Live Demo
+## Tech stack
+
+- React 16
+- JavaScript
+- CSS
+- Browser Audio API
+- GitHub Pages
+- GitHub Actions
+
+## Features
+
+- Adjustable tempo from 40 to 240 BPM
+- Configurable beats per measure from 2/4 to 8/4
+- Accent click on the first beat of each measure
+- Volume control
+- Visual beat indicator
+- Keyboard shortcuts for playback and tempo changes
+- Responsive dark UI
+
+## Live demo
 
 ```text
 https://itkrivoshei.github.io/react-metronome/
 ```
 
-## Overview
+## Requirements
 
-The app provides a simple metronome for rhythm practice, running cadence, and timing drills.
+- Node.js 16
+- npm
 
-```text
-User input
-  ↓
-React state
-  ↓
-Timer interval
-  ↓
-Audio click playback + beat indicator
-```
+The app source is in the nested `react-metronome/` directory.
 
-## Tech Stack
-
-- React
-- JavaScript
-- HTML
-- CSS
-- Web Audio through browser Audio API
-- GitHub Pages
-
-## Features
-
-- Adjustable tempo from 40 to 240 BPM
-- Start and stop playback
-- Accent beat for the first beat of each measure
-- Configurable beats per measure from 2/4 to 8/4
-- Volume control
-- Visual beat indicator
-- Keyboard shortcuts for start/stop and tempo control
-- Responsive dark UI
-- Static deployment with GitHub Pages
-
-## Keyboard Shortcuts
-
-| Shortcut | Action |
-| --- | --- |
-| `Space` | Start or stop metronome |
-| `ArrowLeft` | Decrease BPM |
-| `ArrowRight` | Increase BPM |
-
-## Project Structure
-
-```text
-.
-├── docs/
-├── react-metronome/
-│   ├── public/
-│   ├── src/
-│   │   ├── App.js
-│   │   ├── Metronome.js
-│   │   ├── Metronome.css
-│   │   ├── audio/
-│   │   └── index.js
-│   ├── package.json
-│   └── package-lock.json
-├── LICENSE
-└── README.md
-```
-
-## Getting Started
-
-Clone the repository:
+## Installation
 
 ```bash
 git clone https://github.com/itkrivoshei/react-metronome.git
 cd react-metronome/react-metronome
+npm ci
 ```
 
-Install dependencies:
+## Development
 
-```bash
-npm install
-```
-
-Run the development server:
+Start the local development server:
 
 ```bash
 npm start
 ```
 
-Open locally:
+Open:
 
 ```text
 http://localhost:3000
@@ -101,36 +63,57 @@ http://localhost:3000
 
 ## Build
 
-Create a production build:
-
 ```bash
 npm run build
 ```
 
-The production output is generated in:
+The production build is generated in:
 
 ```text
 react-metronome/build/
 ```
 
-## Portfolio Notes
+## Test and verification
 
-This project is useful as a public portfolio repository because it demonstrates:
+Run the test command:
 
-- React component refactoring from class-based code to hooks
-- State management with `useState`, `useEffect`, `useRef`, `useMemo`, and `useCallback`
-- Timer lifecycle management and cleanup
-- Browser audio playback handling
-- Responsive UI design with CSS variables
-- Accessibility basics with labels, focus states, and keyboard controls
-- Static frontend deployment through GitHub Pages
+```bash
+npm test
+```
 
-## Status
+Run the full local verification command used by CI:
 
-Maintained as a portfolio project.
+```bash
+npm run verify
+```
 
-The original version was an early React learning project. The current version keeps the same idea but refreshes the UI and code structure for a cleaner public profile.
+`npm run verify` runs the test command and then creates a production build.
+
+## Project structure
+
+```text
+.
+├── .github/workflows/ci.yml
+├── docs/
+├── react-metronome/
+│   ├── public/
+│   ├── src/
+│   │   ├── audio/
+│   │   ├── App.js
+│   │   ├── Metronome.js
+│   │   ├── Metronome.css
+│   │   └── index.js
+│   ├── .nvmrc
+│   ├── package.json
+│   └── package-lock.json
+├── LICENSE
+└── README.md
+```
+
+## Deployment
+
+The repository contains a committed `docs/` directory for GitHub Pages deployment.
 
 ## License
 
-This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
