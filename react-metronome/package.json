@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "test:watch": "react-scripts test",
+    "verify": "npm test && npm run build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
