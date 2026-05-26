@@ -1,8 +1,8 @@
 # React Metronome App
 
-Source application for the React Metronome portfolio project.
+Source application for the React Metronome.
 
-The root README contains the main project description, live demo, portfolio notes, and deployment information.
+The root README contains the main project description, live app link, and deployment information.
 
 ## Scripts
 

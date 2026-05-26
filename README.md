@@ -1,119 +1,68 @@
 # React Metronome
 
-[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=master&style=flat-square)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
+[![Live app](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f?style=flat-square&logo=githubpages&logoColor=white)](https://itkrivoshei.github.io/react-metronome/)
+[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=master&style=flat-square&label=ci&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/deploy-pages.yml?branch=master&style=flat-square&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/deploy-pages.yml)
+[![React](https://img.shields.io/badge/React-16-61dafb?style=flat-square&logo=react&logoColor=111)](react-metronome/package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![React](https://img.shields.io/badge/React-16-61dafb?style=flat-square)](react-metronome/package.json)
-[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-live-2ea44f?style=flat-square)](https://itkrivoshei.github.io/react-metronome/)
 
-Browser-based metronome and tempo trainer built with React.
+## [Open Live Metronome ->](https://itkrivoshei.github.io/react-metronome/)
 
-## Tech stack
+Browser metronome and tempo trainer with accent beats, keyboard shortcuts, and bundled click audio.
 
-- React 16
-- JavaScript
-- CSS
-- Browser Audio API
-- GitHub Pages
-- GitHub Actions
+## Control Surface
 
-## Features
+| Control | Range / behavior |
+| --- | --- |
+| Tempo | `40` to `240` BPM |
+| Beats per measure | `2/4` through `8/4` |
+| Playback | Start/stop button and spacebar |
+| Tempo nudge | Arrow left/right |
+| Audio | Separate click samples for accent and regular beats |
 
-- Adjustable tempo from 40 to 240 BPM
-- Configurable beats per measure from 2/4 to 8/4
-- Accent click on the first beat of each measure
-- Volume control
-- Visual beat indicator
-- Keyboard shortcuts for playback and tempo changes
-- Responsive dark UI
+The timing loop is handled in React with refs for interval state and `HTMLAudioElement` instances for low-overhead playback.
 
-## Live demo
+## Run It
 
-```text
-https://itkrivoshei.github.io/react-metronome/
-```
-
-## Requirements
-
-- Node.js 16
-- npm
-
-The app source is in the nested `react-metronome/` directory.
-
-## Installation
+The Create React App source lives in the nested `react-metronome/` directory.
 
 ```bash
 git clone https://github.com/itkrivoshei/react-metronome.git
 cd react-metronome/react-metronome
+nvm use
 npm ci
-```
-
-## Development
-
-Start the local development server:
-
-```bash
 npm start
 ```
 
-Open:
+Open `http://localhost:3000`.
 
-```text
-http://localhost:3000
-```
+## Useful Scripts
 
-## Build
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the React dev server |
+| `npm test` | Run the CRA test command once |
+| `npm run build` | Build static assets |
+| `npm run verify` | Run tests and build |
 
-```bash
-npm run build
-```
-
-The production build is generated in:
-
-```text
-react-metronome/build/
-```
-
-## Test and verification
-
-Run the test command:
-
-```bash
-npm test
-```
-
-Run the full local verification command used by CI:
-
-```bash
-npm run verify
-```
-
-`npm run verify` runs the test command and then creates a production build.
-
-## Project structure
+## Repository Shape
 
 ```text
 .
-├── .github/workflows/ci.yml
-├── docs/
-├── react-metronome/
-│   ├── public/
-│   ├── src/
-│   │   ├── audio/
-│   │   ├── App.js
-│   │   ├── Metronome.js
-│   │   ├── Metronome.css
-│   │   └── index.js
-│   ├── .nvmrc
-│   ├── package.json
-│   └── package-lock.json
-├── LICENSE
-└── README.md
+├── .github/workflows/
+├── docs/                    # committed Pages artifact from earlier releases
+└── react-metronome/
+    ├── public/
+    └── src/
+        ├── audio/
+        ├── App.js
+        └── Metronome.js
 ```
 
-## Deployment
+## Live App
 
-The repository contains a committed `docs/` directory for GitHub Pages deployment.
+https://itkrivoshei.github.io/react-metronome/
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+[MIT](LICENSE)
