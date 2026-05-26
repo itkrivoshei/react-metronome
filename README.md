@@ -6,8 +6,6 @@
 [![React](https://img.shields.io/badge/React-16-61dafb?style=flat-square&logo=react&logoColor=111)](react-metronome/package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-## [Open Live Metronome ->](https://itkrivoshei.github.io/react-metronome/)
-
 Browser metronome and tempo trainer with accent beats, keyboard shortcuts, and bundled click audio.
 
 ## Control Surface
@@ -58,10 +56,6 @@ Open `http://localhost:3000`.
         ├── App.js
         └── Metronome.js
 ```
-
-## Live App
-
-https://itkrivoshei.github.io/react-metronome/
 
 ## License
 
