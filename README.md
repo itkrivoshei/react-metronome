@@ -1,8 +1,8 @@
 # React Metronome
 
 [![Live app](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f?style=flat-square&logo=githubpages&logoColor=white)](https://itkrivoshei.github.io/react-metronome/)
-[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=master&style=flat-square&label=ci&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
-[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/deploy-pages.yml?branch=master&style=flat-square&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/deploy-pages.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=main&style=flat-square&label=ci&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/deploy-pages.yml?branch=main&style=flat-square&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/deploy-pages.yml)
 [![React](https://img.shields.io/badge/React-16-61dafb?style=flat-square&logo=react&logoColor=111)](react-metronome/package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
