@@ -11,11 +11,6 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  NODE_OPTIONS: --openssl-legacy-provider
-  CI: false
-
 concurrency:
   group: github-pages
   cancel-in-progress: true
@@ -38,25 +33,25 @@ jobs:
 
       - name: Install dependencies
         working-directory: react-metronome
-        run: npm ci
+        run: npm ci --loglevel=error
 
       - name: Build static app
         working-directory: react-metronome
         run: npm run build
 
       - name: Add SPA fallback
-        run: cp react-metronome/build/index.html react-metronome/build/404.html
+        run: cp react-metronome/dist/index.html react-metronome/dist/404.html
 
       - name: Verify build output
         run: |
-          test -f react-metronome/build/index.html
-          test -f react-metronome/build/404.html
-          ls -la react-metronome/build
+          test -f react-metronome/dist/index.html
+          test -f react-metronome/dist/404.html
+          ls -la react-metronome/dist
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: react-metronome/build
+          path: react-metronome/dist
 
   deploy:
     name: Deploy to GitHub Pages

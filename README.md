@@ -3,7 +3,7 @@
 [![Live app](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f?style=flat-square&logo=githubpages&logoColor=white)](https://itkrivoshei.github.io/react-metronome/)
 [![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=main&style=flat-square&label=ci&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
 [![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/deploy-pages.yml?branch=main&style=flat-square&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/deploy-pages.yml)
-[![React](https://img.shields.io/badge/React-16-61dafb?style=flat-square&logo=react&logoColor=111)](react-metronome/package.json)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=111)](react-metronome/package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 Browser metronome and tempo trainer with accent beats, keyboard shortcuts, and bundled click audio.
@@ -22,7 +22,7 @@ The timing loop is handled in React with refs for interval state and `HTMLAudioE
 
 ## Run It
 
-The Create React App source lives in the nested `react-metronome/` directory.
+The Vite React source lives in the nested `react-metronome/` directory.
 
 ```bash
 git clone https://github.com/itkrivoshei/react-metronome.git
@@ -38,8 +38,8 @@ Open `http://localhost:3000`.
 
 | Command | Description |
 | --- | --- |
-| `npm start` | Start the React dev server |
-| `npm test` | Run the CRA test command once |
+| `npm start` | Start the Vite dev server |
+| `npm test` | Run the Vitest command once |
 | `npm run build` | Build static assets |
 | `npm run verify` | Run tests and build |
 
@@ -48,13 +48,12 @@ Open `http://localhost:3000`.
 ```text
 .
 ├── .github/workflows/
-├── docs/                    # committed Pages artifact from earlier releases
 └── react-metronome/
     ├── public/
     └── src/
         ├── audio/
-        ├── App.js
-        └── Metronome.js
+        ├── App.jsx
+        └── Metronome.jsx
 ```
 
 ## License
