@@ -1,12 +1,17 @@
+<div align="center">
+
 # React Metronome
 
-[![Live app](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f?style=flat-square&logo=githubpages&logoColor=white)](https://itkrivoshei.github.io/react-metronome/)
-[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=main&style=flat-square&label=ci&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
-[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/deploy-pages.yml?branch=main&style=flat-square&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/deploy-pages.yml)
-[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=111)](react-metronome/package.json)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-
 Browser metronome and tempo trainer with accent beats, keyboard shortcuts, and bundled click audio.
+
+[![Live app](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://itkrivoshei.github.io/react-metronome/)
+[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/ci.yml?branch=main&style=for-the-badge&label=ci&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/ci.yml)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/deploy-pages.yml?branch=main&style=for-the-badge&label=deploy&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/deploy-pages.yml)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/itkrivoshei/react-metronome/codeql.yml?branch=main&style=for-the-badge&label=codeql&logo=github&logoColor=white)](https://github.com/itkrivoshei/react-metronome/actions/workflows/codeql.yml)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react&logoColor=111)](react-metronome/package.json)
+[![License](https://img.shields.io/github/license/itkrivoshei/react-metronome?style=for-the-badge)](LICENSE)
+
+</div>
 
 ## Control Surface
 
